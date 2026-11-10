@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miller Strategic Technologies | Microsoft 365, Cloud, AI and IT Consulting</title>
+<meta name="description" content="Miller Strategic Technologies helps small and medium-sized businesses improve Microsoft 365, cloud and infrastructure, systems integration, and practical AI and automation.">
+<link rel="icon" href="logo.png">
+<style>
+:root{--black:#050608;--charcoal:#111820;--blue:#008CFF;--cyan:#00D9FF;--silver:#C7CDD4;--white:#FFFFFF;--muted:#9aa3ad;--error:#ff8a8a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--black);color:var(--silver);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.65;font-size:17px}
+a{color:var(--cyan)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+h1,h2,h3{color:var(--white);line-height:1.2}
+.metal{background:linear-gradient(180deg,#ffffff 0%,#C7CDD4 45%,#7d8590 52%,#e6e9ed 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--cyan);color:var(--black);padding:10px 16px;border-radius:4px;z-index:200;font-weight:600}
+.skip:focus{left:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;border:0;border-radius:4px;color:var(--white);background:linear-gradient(135deg,var(--blue),var(--cyan));font:600 1rem/1.2 inherit;font-family:inherit;letter-spacing:.5px;text-decoration:none;cursor:pointer;box-shadow:0 0 18px rgba(0,140,255,.45);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(0,217,255,.7)}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+.btn.ghost{background:transparent;border:1px solid var(--blue);box-shadow:none}
+.btn.ghost:hover{box-shadow:0 0 18px rgba(0,140,255,.5)}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;margin-bottom:12px}
+h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:16px}
+.lead{font-size:1.1rem;max-width:680px;margin-bottom:28px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,6,8,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,140,255,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand img{height:44px;width:auto;display:block}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{color:var(--silver);font-size:.95rem;text-decoration:none;transition:color .2s,text-shadow .2s;display:inline-block;padding:6px 0}
+nav a:hover,nav a.active{color:var(--cyan);text-shadow:0 0 8px rgba(0,217,255,.6)}
+nav a[aria-current="page"]{color:var(--cyan)}
+.menu-btn{display:none;background:none;border:1px solid var(--blue);color:var(--white);width:48px;height:48px;font-size:1.3rem;border-radius:4px;cursor:pointer}
+.page{display:none;min-height:100vh;padding-top:72px}
+.page.active{display:block;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hero{min-height:calc(100vh - 72px);display:flex;align-items:center;position:relative;overflow:hidden;padding:48px 0;background:radial-gradient(ellipse at 75% 35%,rgba(0,140,255,.28),transparent 60%),radial-gradient(ellipse at 5% 95%,rgba(0,217,255,.12),transparent 50%),var(--black)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 18px var(--cyan)}
+.hero h1{font-size:clamp(2.2rem,6vw,4.4rem);margin-bottom:20px;font-weight:800}
+.hero-logo{width:min(380px,70%);margin-bottom:32px;filter:drop-shadow(0 0 30px rgba(0,140,255,.35))}
+.hero p{max-width:640px;margin-bottom:36px;font-size:1.15rem}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:linear-gradient(160deg,var(--charcoal),var(--black));border:1px solid rgba(199,205,212,.12);border-radius:8px;padding:32px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--blue);box-shadow:0 0 24px rgba(0,140,255,.3)}
+.card h3{font-size:1.25rem;margin-bottom:12px}
+.card ul{list-style:none;margin-top:14px}
+.card li{padding:6px 0 6px 20px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:15px;width:6px;height:6px;background:var(--cyan);box-shadow:0 0 6px var(--cyan)}
+.icon{font-size:1.8rem;color:var(--cyan);margin-bottom:14px;text-shadow:0 0 12px rgba(0,217,255,.6)}
+.band{background:var(--charcoal);border-top:1px solid rgba(0,140,255,.15);border-bottom:1px solid rgba(0,140,255,.15)}
+.why{list-style:none;columns:2;column-gap:48px}
+.why li{padding:12px 0 12px 28px;position:relative;break-inside:avoid}
+.why li::before{content:"\25B8";position:absolute;left:0;color:var(--cyan);text-shadow:0 0 8px var(--cyan)}
+.about-text p{margin-bottom:18px;max-width:760px}
+.form{display:grid;gap:22px;grid-template-columns:1fr 1fr;max-width:840px}
+.form .full{grid-column:1/-1}
+label{display:block;font-size:1rem;color:var(--silver);margin-bottom:8px}
+.req{color:var(--cyan)}
+input,select,textarea{width:100%;min-height:48px;background:var(--charcoal);border:1px solid rgba(199,205,212,.3);color:var(--white);padding:12px 14px;border-radius:4px;font:inherit;font-size:16px}
+select{appearance:auto}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 12px rgba(0,217,255,.35)}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:var(--error)}
+textarea{min-height:140px;resize:vertical}
+.field-error{display:none;color:var(--error);font-size:.9rem;margin-top:6px}
+.field-error.show{display:block}
+.status{margin-top:20px;max-width:840px;padding:18px 22px;border-radius:6px;display:none}
+.status.show{display:block}
+.status.error{border:1px solid var(--error);background:rgba(255,138,138,.08);color:var(--white)}
+.status.success{border:1px solid var(--cyan);background:rgba(0,140,255,.08);color:var(--white);box-shadow:0 0 24px rgba(0,217,255,.2)}
+.status.info{border:1px solid var(--blue);background:rgba(0,140,255,.06);color:var(--white)}
+.status h3{font-size:1.15rem;margin-bottom:6px}
+.contact-info{margin-top:40px;max-width:840px}
+.contact-info p{margin-bottom:10px;overflow-wrap:anywhere}
+.contact-info strong{color:var(--white)}
+[hidden]{display:none!important}
+footer{background:#020304;border-top:1px solid rgba(0,140,255,.2);padding:56px 0 24px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px}
+.foot img{height:56px;width:auto;margin-bottom:14px}
+.foot p{font-size:.95rem;color:var(--muted);max-width:360px;overflow-wrap:anywhere}
+.foot nav ul{flex-direction:column;gap:6px}
+.copy{text-align:center;color:#7d8590;font-size:.85rem;margin-top:40px}
+@media(max-width:820px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--black);padding:8px 20px 16px;border-bottom:1px solid var(--blue)}
+  nav ul.open{display:flex}
+  nav li a{display:block;padding:14px 0;font-size:1rem;border-bottom:1px solid rgba(199,205,212,.08)}
+  section{padding:64px 0}
+  .hero{min-height:auto;padding:56px 0 64px}
+  .hero-logo{margin-bottom:24px}
+  .hero p{margin-bottom:28px}
+  .btns .btn{width:100%}
+  .form{grid-template-columns:1fr;gap:20px}
+  .why{columns:1}
+  .card{padding:26px}
+  .foot{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Miller Strategic Technologies, home"><img src="logo.png" alt="Miller Strategic Technologies"></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navList">&#9776;</button>
+    <nav aria-label="Main navigation">
+      <ul id="navList">
+        <li><a href="#home" data-page="home">Home</a></li>
+        <li><a href="#services" data-page="services">Services</a></li>
+        <li><a href="#about" data-page="about">About Us</a></li>
+        <li><a href="#contact" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HOME -->
+<div class="page" id="home">
+  <div class="hero">
+    <div class="wrap">
+      <img class="hero-logo" src="logo.png" alt="">
+      <h1><span class="metal">Technology Built Around Your Business</span></h1>
+      <p>Miller Strategic Technologies helps organizations modernize how they work. We bring clarity to Microsoft 365, cloud and infrastructure, systems integration, and practical AI and automation, so your technology supports your people instead of slowing them down.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Contact Us</a>
+        <a class="btn ghost" href="#services">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Core Services</p>
+      <h2>Practical technology for growing businesses</h2>
+      <p class="lead">Four areas of focus, each designed to make your technology more capable, more secure in how it is used, and easier to manage.</p>
+      <div class="grid">
+        <div class="card"><div class="icon" aria-hidden="true">&#9670;</div><h3>Microsoft 365 Consulting</h3><p>Administration, SharePoint, Teams, and workflows that get more from the tools you already own.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">&#9670;</div><h3>Cloud and Infrastructure</h3><p>Azure services, network design, and infrastructure planning built for reliability and growth.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">&#9670;</div><h3>AI and Automation</h3><p>Realistic AI planning and automation that removes repetitive manual work from daily operations.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">&#9670;</div><h3>Technology Consulting</h3><p>IT assessments, technology roadmaps, and modernization planning aligned with business goals.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>Clear thinking. Careful execution.</h2>
+      <p class="lead">We focus on the outcomes your business needs and on solutions your team can actually use.</p>
+      <ul class="why">
+        <li>Technical leadership grounded in enterprise IT experience</li>
+        <li>Practical recommendations sized to small and mid-sized businesses</li>
+        <li>Straightforward communication with decision-makers and staff</li>
+        <li>Solutions that integrate with the systems you already use</li>
+        <li>Planning that reduces repetitive manual work</li>
+        <li>Mission-focused execution from assessment through implementation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="center">
+    <div class="wrap">
+      <h2>Ready to modernize your technology?</h2>
+      <p class="lead">Tell us about your environment and goals. We will help you identify the most useful next step.</p>
+      <a class="btn" href="#contact">Contact Us</a>
+    </div>
+  </section>
+</div>
+
+<!-- SERVICES -->
+<div class="page" id="services">
+  <section style="padding-top:72px">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>What we do</h2>
+      <p class="lead">Each engagement begins with understanding how your organization works today, then building a plan that moves it forward.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Microsoft 365 Consulting</h3>
+          <p>Get the most from your Microsoft 365 environment.</p>
+          <ul>
+            <li>Microsoft 365 administration</li>
+            <li>SharePoint architecture and team sites</li>
+            <li>Microsoft Teams collaboration</li>
+            <li>Document management</li>
+            <li>Permissions and access management</li>
+            <li>Workflow improvements</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cloud and Infrastructure</h3>
+          <p>Infrastructure that is planned, documented, and maintainable.</p>
+          <ul>
+            <li>Azure cloud services</li>
+            <li>Network infrastructure</li>
+            <li>Systems integration</li>
+            <li>Infrastructure planning</li>
+            <li>Technical troubleshooting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>AI and Automation</h3>
+          <p>Thoughtful adoption of AI and automation tied to real business processes.</p>
+          <ul>
+            <li>AI implementation planning</li>
+            <li>Business process automation</li>
+            <li>Workflow optimization</li>
+            <li>AI-assisted business operations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Technology Consulting</h3>
+          <p>Strategic guidance for technology decisions.</p>
+          <ul>
+            <li>IT assessments</li>
+            <li>Technology planning</li>
+            <li>Systems modernization</li>
+            <li>Technical project coordination</li>
+            <li>IT strategy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="center" style="margin-top:56px"><a class="btn" href="#contact">Discuss Your Project</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="about">
+  <section style="padding-top:72px">
+    <div class="wrap about-text">
+      <p class="eyebrow">About Us</p>
+      <h2>Miller Strategic Technologies</h2>
+      <p>Miller Strategic Technologies is a technology consulting firm focused on practical solutions for businesses. We help organizations improve their technology infrastructure, collaboration, security awareness, and operational efficiency.</p>
+      <p>Our approach is grounded in technical leadership and enterprise IT experience. We look at how your people work, what your systems need to do, and where technology can reduce friction rather than add to it.</p>
+      <p>We serve small and medium-sized businesses that want a clear technology direction without unnecessary complexity. Whether you are getting more from Microsoft 365, planning a cloud or infrastructure change, or exploring automation, we focus on steady, mission-driven execution that your team can sustain.</p>
+      <div class="btns" style="margin-top:32px"><a class="btn" href="#contact">Start a Conversation</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="contact">
+  <section style="padding-top:72px">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk about your technology</h2>
+      <p class="lead">Share a few details and we will follow up to discuss your goals. Fields marked <span class="req" aria-hidden="true">*</span> are required.</p>
+
+      <form class="form" id="contactForm" novalidate>
+        <div>
+          <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="name" name="name" required aria-required="true" autocomplete="name" aria-describedby="name-err">
+          <div class="field-error" id="name-err">Please enter your name.</div>
+        </div>
+        <div>
+          <label for="email">Business email <span class="req" aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" aria-describedby="email-err">
+          <div class="field-error" id="email-err">Please enter a valid business email address.</div>
+        </div>
+        <div>
+          <label for="company">Company <span class="req" aria-hidden="true">*</span></label>
+          <input id="company" name="company" required aria-required="true" autocomplete="organization" aria-describedby="company-err">
+          <div class="field-error" id="company-err">Please enter your company name.</div>
+        </div>
+        <div>
+          <label for="phone">Phone number <span style="color:var(--muted)">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="full">
+          <label for="services">What services are you interested in?</label>
+          <select id="services" name="services">
+            <option value="">Select a service</option>
+            <option>Microsoft 365 Consulting</option>
+            <option>Cloud and Infrastructure</option>
+            <option>AI and Automation</option>
+            <option>Technology Consulting</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="message">Project description <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required aria-required="true" aria-describedby="message-err"></textarea>
+          <div class="field-error" id="message-err">Please describe your project.</div>
+        </div>
+        <div class="full">
+          <button class="btn" type="submit" id="submitBtn">Submit Request</button>
+        </div>
+      </form>
+
+      <div class="status" id="status" role="status" aria-live="polite" tabindex="-1"></div>
+
+      <div class="contact-info" id="contactInfo">
+        <p id="emailRow" hidden><strong>Email:</strong> <a id="contactEmail" href="#"></a></p>
+        <p id="phoneRow" hidden><strong>Phone:</strong> <a id="contactPhone" href="#"></a></p>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="logo.png" alt="Miller Strategic Technologies">
+        <p>Technology consulting for small and medium-sized businesses: Microsoft 365, cloud and infrastructure, AI and automation, and IT strategy.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p id="footerEmailRow" hidden><a id="footerEmail" href="#"></a></p>
+        <p id="footerPhoneRow" hidden><a id="footerPhone" href="#"></a></p>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Miller Strategic Technologies. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// ---- Configuration ----
+// Leave a value empty ("") to hide it on the site. Nothing placeholder-like is ever shown to visitors.
+const CONFIG = {
+  email: "solutions@millerstrategictech.com",
+  phone: "",                 // add the phone number when available, e.g. "(931) 555-0123"
+  // Paste a form-handling endpoint here (e.g. Formspree, Netlify Forms, or your own API).
+  // While empty, the form does NOT claim to have sent anything; it offers an email fallback instead.
+  formEndpoint: "https://formspree.io/f/xljjqnad"
+};
+
+const PAGES = {
+  home:     { title: "Miller Strategic Technologies | Technology Built Around Your Business", desc: "Miller Strategic Technologies helps businesses modernize Microsoft 365, cloud and infrastructure, systems integration, and practical AI and automation." },
+  services: { title: "Services | Miller Strategic Technologies", desc: "Microsoft 365 consulting, cloud and infrastructure, AI and automation, and technology consulting for small and medium-sized businesses." },
+  about:    { title: "About Us | Miller Strategic Technologies", desc: "Learn about Miller Strategic Technologies, a technology consulting firm focused on practical, mission-driven IT solutions." },
+  contact:  { title: "Contact | Miller Strategic Technologies", desc: "Contact Miller Strategic Technologies to discuss Microsoft 365, cloud, AI and automation, or IT strategy for your business." }
+};
+
+const form = document.getElementById("contactForm");
+const statusBox = document.getElementById("status");
+const submitBtn = document.getElementById("submitBtn");
+const navList = document.getElementById("navList");
+const menuBtn = document.getElementById("menuBtn");
+
+function setContactDetails(){
+  if (CONFIG.email) {
+    for (const id of ["contactEmail","footerEmail"]) {
+      const a = document.getElementById(id);
+      a.textContent = CONFIG.email; a.href = "mailto:" + CONFIG.email;
+    }
+    document.getElementById("emailRow").hidden = false;
+    document.getElementById("footerEmailRow").hidden = false;
+  }
+  if (CONFIG.phone) {
+    const digits = CONFIG.phone.replace(/[^\d+]/g, "");
+    for (const id of ["contactPhone","footerPhone"]) {
+      const a = document.getElementById(id);
+      a.textContent = CONFIG.phone; a.href = "tel:" + digits;
+    }
+    document.getElementById("phoneRow").hidden = false;
+    document.getElementById("footerPhoneRow").hidden = false;
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+}
+
+function route(){
+  const id = (location.hash || "#home").slice(1);
+  const key = PAGES[id] ? id : "home";
+  document.querySelectorAll(".page").forEach(p => p.classList.toggle("active", p.id === key));
+  document.querySelectorAll("nav a[data-page]").forEach(a => {
+    const on = a.dataset.page === key;
+    a.classList.toggle("active", on);
+    if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+  });
+  document.title = PAGES[key].title;
+  document.querySelector('meta[name="description"]').setAttribute("content", PAGES[key].desc);
+  navList.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded", "false");
+  window.scrollTo({ top: 0, behavior: "auto" });
+}
+
+menuBtn.addEventListener("click", () => {
+  const open = navList.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+});
+
+function showStatus(type, title, body){
+  statusBox.className = "status show " + type;
+  statusBox.innerHTML = "";
+  const h = document.createElement("h3");
+  h.textContent = title;
+  const p = document.createElement("p");
+  p.textContent = body;
+  statusBox.append(h, p);
+  statusBox.focus();
+}
+
+function validate(){
+  let firstBad = null;
+  const rules = [
+    ["name", v => v.trim().length > 0],
+    ["email", v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())],
+    ["company", v => v.trim().length > 0],
+    ["message", v => v.trim().length > 0]
+  ];
+  for (const [id, ok] of rules) {
+    const el = document.getElementById(id);
+    const err = document.getElementById(id + "-err");
+    const valid = ok(el.value);
+    el.setAttribute("aria-invalid", String(!valid));
+    err.classList.toggle("show", !valid);
+    if (!valid && !firstBad) firstBad = el;
+  }
+  return firstBad;
+}
+
+["name","email","company","message"].forEach(id => {
+  document.getElementById(id).addEventListener("input", () => {
+    const el = document.getElementById(id);
+    if (el.getAttribute("aria-invalid") === "true") validate();
+  });
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  statusBox.className = "status";
+  const firstBad = validate();
+  if (firstBad) {
+    firstBad.focus();
+    showStatus("error", "Please check the highlighted fields", "Some required information is missing or invalid.");
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  // No endpoint configured: do not claim the request was received.
+  if (!CONFIG.formEndpoint) {
+    const subject = encodeURIComponent("Website inquiry from " + data.company);
+    const body = encodeURIComponent(
+      "Name: " + data.name + "\n" +
+      "Business email: " + data.email + "\n" +
+      "Company: " + data.company + "\n" +
+      "Phone: " + (data.phone || "Not provided") + "\n" +
+      "Services of interest: " + (data.services || "Not specified") + "\n\n" +
+      "Project description:\n" + data.message
+    );
+    window.location.href = "mailto:" + CONFIG.email + "?subject=" + subject + "&body=" + body;
+    showStatus("info", "Your email app should open", "Our online form is not connected yet, so please send the message from your email app. If nothing opens, write to " + CONFIG.email + " directly. Your request has not been sent until you send that email.");
+    return;
+  }
+
+  submitBtn.disabled = true;
+  const originalLabel = submitBtn.textContent;
+  submitBtn.textContent = "Sending...";
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    const res = await fetch(CONFIG.formEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(data),
+      signal: controller.signal
+    });
+    clearTimeout(timeout);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    form.reset();
+    form.style.display = "none";
+    showStatus("success", "Thank you. Your request was sent.", "A member of the Miller Strategic Technologies team will review your message and follow up. For urgent matters, email " + CONFIG.email + ".");
+  } catch (err) {
+    const msg = err.name === "AbortError"
+      ? "The request timed out. Please check your connection and try again."
+      : "Your request could not be sent. Please try again, or email " + CONFIG.email + " directly.";
+    showStatus("error", "We could not send your request", msg);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalLabel;
+  }
+});
+
+window.addEventListener("hashchange", () => {
+  form.style.display = "";
+  statusBox.className = "status";
+  statusBox.innerHTML = "";
+  route();
+});
+
+setContactDetails();
+route();
+</script>
+</body>
+</html>
