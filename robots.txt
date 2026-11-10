@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://millerstrategictech.com/sitemap.xml
